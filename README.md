@@ -97,7 +97,7 @@ spec:
 ```
 
 
-``` yaml
+```
 kubectl apply -f k8s/deployment-blue.yaml
 kubectl apply -f k8s/service-live.yaml
 minikube ip
