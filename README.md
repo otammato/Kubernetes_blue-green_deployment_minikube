@@ -167,3 +167,23 @@ curl 192.168.99.103:30090/api/info
 $ curl 192.168.99.103:30092/api/info
 {"version":"v2","app":"K8S SpringBoot Demo","hostName":"k8s-boot-demo-deployment-green-d7b94fdc5-5xxgw"}
 ```
+
+service-live.yaml
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-boot-demo-service
+spec:
+  type: NodePort
+  selector:
+    app: k8s-boot-demo
+    version: v2
+  ports:
+    - name: app-port-mapping
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30090
+```
