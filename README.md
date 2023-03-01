@@ -135,3 +135,35 @@ spec:
           ports:
             - containerPort: 8080
 ```
+
+service-preprod.yaml
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-boot-demo-service-preprod
+spec:
+  type: NodePort
+  selector:
+    app: k8s-boot-demo
+    version: v2
+  ports:
+    - name: app-port-mapping
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30092
+```
+
+```
+kubectl apply -f k8s/deployment-green.yaml
+kubectl apply -f k8s/service-preprod.yaml
+kubectl get all
+minikube ip
+192.168.99.103
+curl 192.168.99.103:30090/api/info
+{"hostName":"k8s-boot-demo-deployment-blue-7459fc4bd8-rk8kt","app":"K8S SpringBoot Demo","version":"v1"}
+$ curl 192.168.99.103:30092/api/info
+{"version":"v2","app":"K8S SpringBoot Demo","hostName":"k8s-boot-demo-deployment-green-d7b94fdc5-5xxgw"}
+```
