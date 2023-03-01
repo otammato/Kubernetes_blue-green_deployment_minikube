@@ -179,6 +179,14 @@ $ curl 192.168.99.103:30092/api/info
 
 <img width="1024" alt="Screenshot 2023-03-01 at 15 49 31" src="https://user-images.githubusercontent.com/104728608/222191512-33271011-a36e-4d44-8772-8b52407f2fd0.png">
 
+
+```
+#!/bin/bash
+
+# Find and replace the version value in the Service manifest
+sed -i 's/version: v1/version: v2/g' k8s-boot-demo-service.yaml
+```
+
 service-live.yaml
 
 ``` yaml
