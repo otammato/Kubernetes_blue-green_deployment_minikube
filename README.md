@@ -184,7 +184,7 @@ $ curl 192.168.99.103:30092/api/info
 #!/bin/bash
 
 # Find and replace the version value in the Service manifest
-sed -i 's/version: v1/version: v2/g' k8s-boot-demo-service.yaml
+sed -i 's/version: v1/version: v2/g' service-live.yaml
 ```
 
 service-live.yaml
