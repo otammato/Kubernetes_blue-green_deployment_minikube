@@ -101,9 +101,12 @@ spec:
 kubectl apply -f deployment-blue.yaml
 kubectl apply -f service-live.yaml
 minikube ip
-192.168.99.103
-$ curl 192.168.99.103:30090/api/info
+192.168.49.2
+curl 192.168.49.2:30090/api/info
 ```
+
+<img width="1024" alt="Screenshot 2023-03-01 at 15 32 03" src="https://user-images.githubusercontent.com/104728608/222186758-f5a1ccbc-5f98-461a-951c-d2c8e63cbabb.png">
+
 
 deployment-green.yaml
 
