@@ -38,7 +38,7 @@ sudo systemctl start docker
 
 sudo reboot
 ```
-<details/>
+</details>
 
 ```
 minikube start
