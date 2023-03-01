@@ -188,7 +188,7 @@ spec:
       nodePort: 30090
 ```
 
-``` yaml
+``` 
 $ kubectl apply -f k8s/service-live.yaml
 $ minikube ip
 192.168.99.103
