@@ -192,7 +192,8 @@ spec:
       targetPort: 8080
       nodePort: 30090
 ```
-<img width="1024" alt="Screenshot 2023-03-01 at 15 57 50" src="https://user-images.githubusercontent.com/104728608/222197839-eecbf891-dbb9-49ba-8655-29d9acf3260c.png">
+
+<img width="1024" alt="Screenshot 2023-03-01 at 16 16 00" src="https://user-images.githubusercontent.com/104728608/222199260-2aff1fea-1bb2-4272-bdd5-c36753ba1c18.png">
 
 ``` 
 kubectl apply -f service-live.yaml
