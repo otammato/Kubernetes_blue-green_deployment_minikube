@@ -212,11 +212,9 @@ $ curl 192.168.99.103:30092/api/info
 kubectl patch service my-app -p '{"spec":{"selector":{"version":"v2.0.0"}}}'
 ```
 
-This script uses the "sed" command to perform a global search and replace operation on the "service-live.yaml" file. The pattern to search for is "version: v1", and the replacement value is "version: v2". The "-i" option modifies the file in place.
+Alternatively, this "sed" command can be used to perform a global search and replace operation on the "service-live.yaml" file. The pattern to search for is "version: v1", and the replacement value is "version: v2". The "-i" option modifies the file in place.
 
 ```
-#!/bin/bash
-
 # Find and replace the version value in the Service manifest
 sed -i 's/version: v1/version: v2/g' service-live.yaml
 ```
