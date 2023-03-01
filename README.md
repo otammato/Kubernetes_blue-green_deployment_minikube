@@ -208,12 +208,11 @@ $ curl 192.168.99.103:30092/api/info
 <img width="1024" alt="Screenshot 2023-03-01 at 15 49 31" src="https://user-images.githubusercontent.com/104728608/222191512-33271011-a36e-4d44-8772-8b52407f2fd0.png">
 
 
+```
+kubectl patch service my-app -p '{"spec":{"selector":{"version":"v2.0.0"}}}'
+```
+
 This script uses the "sed" command to perform a global search and replace operation on the "service-live.yaml" file. The pattern to search for is "version: v1", and the replacement value is "version: v2". The "-i" option modifies the file in place.
-
-```
-kubectl patch service my-app -p '{"spec":{"selector":{"version":"v1.0.0"}}}'
-```
-
 
 ```
 #!/bin/bash
