@@ -1,7 +1,10 @@
 # Kubernetes_blue-green_deployment_minikube
 [ Kubernetes ] Deploy a simple app using a blue-green deployment strategy
 
-<img width="300" alt="Screenshot 2023-03-01 at 14 38 28" src="https://user-images.githubusercontent.com/104728608/222228704-d2daddb5-a8f6-4c96-9cd9-b61421466ba8.png">
+<img width="300" alt="Screenshot 2023-03-01 at 14 38 28" src="https://user-images.githubusercontent.com/104728608/222228704-d2daddb5-a8f6-4c96-9cd9-b61421466ba8.png"><img width="300" alt="Screenshot 2023-03-01 at 14 38 28" src="https://user-images.githubusercontent.com/104728608/222230138-9bf46875-2a2a-41bd-936c-d35df1f35935.png">
+
+
+
 
 
 ### 1. Installing and starting Kubernetes, Docker, kubectl and minicube
