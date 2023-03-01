@@ -42,3 +42,36 @@ minikube start
 ```
 
 <img width="1024" alt="Screenshot 2023-03-01 at 14 38 28" src="https://user-images.githubusercontent.com/104728608/222172364-fde0d4c1-5538-4b04-a480-03e3293b1e42.png">
+
+### 2. 
+
+deployment-blue.yaml
+
+``` yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-boot-demo-deployment-blue
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: k8s-boot-demo
+      version: v1
+      color: blue
+  template:
+    metadata:
+      labels:
+        app: k8s-boot-demo
+        version: v1
+        color: blue
+    spec:
+      containers:
+        - name: k8s-boot-demo
+          image: sivaprasadreddy/k8s-boot-demo:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+```
