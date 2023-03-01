@@ -78,7 +78,7 @@ spec:
 
 service-live.yaml
 
-```
+``` yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -97,7 +97,7 @@ spec:
 ```
 
 
-```
+``` yaml
 kubectl apply -f k8s/deployment-blue.yaml
 kubectl apply -f k8s/service-live.yaml
 minikube ip
@@ -107,7 +107,7 @@ $ curl 192.168.99.103:30090/api/info
 
 deployment-green.yaml
 
-```
+``` yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -138,7 +138,7 @@ spec:
 
 service-preprod.yaml
 
-```
+``` yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -170,7 +170,7 @@ $ curl 192.168.99.103:30092/api/info
 
 service-live.yaml
 
-```
+``` yaml
 apiVersion: v1
 kind: Service
 metadata:
