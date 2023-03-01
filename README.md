@@ -198,10 +198,8 @@ spec:
 kubectl apply -f service-live.yaml
 minikube ip
 192.168.49.2
-curl 192.168.99.103:30090/api/info
-{"version":"v2","app":"K8S SpringBoot Demo","hostName":"k8s-boot-demo-deployment-green-d7b94fdc5-bhv9c"}
-curl 192.168.99.103:30092/api/info
-{"version":"v2","app":"K8S SpringBoot Demo","hostName":"k8s-boot-demo-deployment-green-d7b94fdc5-bhv9c"}
+curl 192.168.49.2:30090/api/info
+curl 192.168.49.2:30092/api/info
 ```
 
 <img width="1024" alt="Screenshot 2023-03-01 at 16 04 42" src="https://user-images.githubusercontent.com/104728608/222195794-15e3da98-2862-46a7-8f77-e9b3dc8ee11b.png">
