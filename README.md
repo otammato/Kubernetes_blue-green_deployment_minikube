@@ -31,7 +31,11 @@ sudo yum install docker
 
 sudo usermod -aG docker $USER && newgrp docker
 
+sudo systemctl enable docker
+
 sudo systemctl start docker
+
+sudo reboot
 ```
 ```
 minikube start
