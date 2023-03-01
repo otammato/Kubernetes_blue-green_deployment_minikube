@@ -75,3 +75,63 @@ spec:
           ports:
             - containerPort: 8080
 ```
+
+service-live.yaml
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-boot-demo-service
+spec:
+  type: NodePort
+  selector:
+    app: k8s-boot-demo
+    version: v1
+  ports:
+    - name: app-port-mapping
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30090
+```
+
+
+```
+kubectl apply -f k8s/deployment-blue.yaml
+kubectl apply -f k8s/service-live.yaml
+minikube ip
+192.168.99.103
+$ curl 192.168.99.103:30090/api/info
+```
+
+deployment-green.yaml
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-boot-demo-deployment-green
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: k8s-boot-demo
+      version: v2
+      color: green
+  template:
+    metadata:
+      labels:
+        app: k8s-boot-demo
+        version: v2
+        color: green
+    spec:
+      containers:
+        - name: k8s-boot-demo
+          image: sivaprasadreddy/k8s-boot-demo:v2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+```
