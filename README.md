@@ -187,3 +187,13 @@ spec:
       targetPort: 8080
       nodePort: 30090
 ```
+
+``` yaml
+$ kubectl apply -f k8s/service-live.yaml
+$ minikube ip
+192.168.99.103
+$ curl 192.168.99.103:30090/api/info
+{"version":"v2","app":"K8S SpringBoot Demo","hostName":"k8s-boot-demo-deployment-green-d7b94fdc5-bhv9c"}
+$ curl 192.168.99.103:30092/api/info
+{"version":"v2","app":"K8S SpringBoot Demo","hostName":"k8s-boot-demo-deployment-green-d7b94fdc5-bhv9c"}
+```
