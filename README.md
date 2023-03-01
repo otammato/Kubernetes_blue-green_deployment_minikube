@@ -5,6 +5,7 @@
 ### 1. Installing and starting Kubernetes, Docker, kubectl and minicube
 
 <details markdown=1><summary markdown="span">Set of commands</summary>
+
 ```
 sudo su
 
