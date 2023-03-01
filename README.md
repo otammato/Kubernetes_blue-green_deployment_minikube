@@ -98,8 +98,8 @@ spec:
 
 
 ```
-kubectl apply -f k8s/deployment-blue.yaml
-kubectl apply -f k8s/service-live.yaml
+kubectl apply -f deployment-blue.yaml
+kubectl apply -f service-live.yaml
 minikube ip
 192.168.99.103
 $ curl 192.168.99.103:30090/api/info
