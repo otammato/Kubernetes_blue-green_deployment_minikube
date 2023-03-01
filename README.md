@@ -160,8 +160,8 @@ spec:
 ```
 
 ```
-kubectl apply -f k8s/deployment-green.yaml
-kubectl apply -f k8s/service-preprod.yaml
+kubectl apply -f deployment-green.yaml
+kubectl apply -f service-preprod.yaml
 kubectl get all
 minikube ip
 192.168.99.103
