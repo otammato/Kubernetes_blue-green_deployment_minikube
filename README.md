@@ -1,6 +1,26 @@
 # Kubernetes_blue-green_deployment_minikube
 [ Kubernetes ] Deploy a simple app using a blue-green deployment strategy
 
+> In Kubernetes there are a few different ways to release an application, you have
+to carefully choose the right strategy to make your infrastructure resilient.
+
+- [recreate](recreate/): terminate the old version and release the new one
+- [ramped](ramped/): release a new version on a rolling update fashion, one
+  after the other
+- [blue/green](blue-green/): release a new version alongside the old version
+  then switch traffic
+- [canary](canary/): release a new version to a subset of users, then proceed
+  to a full rollout
+- [a/b testing](ab-testing/): release a new version to a subset of users in a
+  precise way (HTTP headers, cookie, weight, etc.). This doesn’t come out of the
+  box with Kubernetes, it imply extra work to setup a smarter
+  loadbalancing system (Istio, Linkerd, Traeffik, custom nginx/haproxy, etc).
+- [shadow](shadow/): release a new version alongside the old version. Incoming
+  traffic is mirrored to the new version and doesn't impact the
+  response.
+
+![deployment strategy decision diagram](decision-diagram.png)
+
 <img width="330" alt="Screenshot 2023-03-01 at 14 38 28" src="https://user-images.githubusercontent.com/104728608/222228704-d2daddb5-a8f6-4c96-9cd9-b61421466ba8.png">  <img width="330" alt="Screenshot 2023-03-01 at 14 38 28" src="https://user-images.githubusercontent.com/104728608/222230138-9bf46875-2a2a-41bd-936c-d35df1f35935.png">  <img width="330" alt="Screenshot 2023-03-01 at 14 38 28" src="https://user-images.githubusercontent.com/104728608/222230833-e6c06414-1bd7-4b12-9ceb-1fae96495b89.png">
 
 
