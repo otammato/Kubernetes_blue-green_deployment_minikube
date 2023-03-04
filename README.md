@@ -25,7 +25,7 @@ to carefully choose the right strategy to make your infrastructure resilient.
 
 <br>
 
-## In this project we will use the "blue-green" approach
+## In this demo we will use the "blue-green" approach
 
 <br>
 
