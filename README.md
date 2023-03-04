@@ -248,4 +248,5 @@ curl 192.168.49.2:30092/api/info
 
 <img width="1024" alt="Screenshot 2023-03-01 at 16 04 42" src="https://user-images.githubusercontent.com/104728608/222195794-15e3da98-2862-46a7-8f77-e9b3dc8ee11b.png">
 
+<img width="1024" alt="Screenshot 2023-03-04 at 15 11 12" src="https://user-images.githubusercontent.com/104728608/222913951-79aa18b7-ca87-45ac-84f6-f728c15a95c1.png">
 
