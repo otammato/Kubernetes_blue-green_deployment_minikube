@@ -246,7 +246,11 @@ curl 192.168.49.2:30090/api/info
 curl 192.168.49.2:30092/api/info
 ```
 
+
 <img width="1024" alt="Screenshot 2023-03-01 at 16 04 42" src="https://user-images.githubusercontent.com/104728608/222195794-15e3da98-2862-46a7-8f77-e9b3dc8ee11b.png">
+
+
+### 3. When you make sure the green deployment works as expected, remove the "blue" deployment and the "pre-prod" service
 
 ```
 kubectl delete -f service-preprod.yaml
