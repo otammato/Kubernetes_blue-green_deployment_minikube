@@ -1,4 +1,4 @@
-# Kubernetes_blue-green_deployment_minikube
+# Kubernetes_blue-green_deployment_minikube_demo
 [ Kubernetes ] Deploy a simple app using a blue-green deployment strategy
 
 > In Kubernetes there are a few different ways to release an application, you have
