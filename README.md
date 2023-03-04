@@ -89,8 +89,6 @@ metadata:
   name: k8s-boot-demo-deployment-blue
 spec:
   replicas: 3
-  strategy:
-    type: RollingUpdate
   selector:
     matchLabels:
       app: k8s-boot-demo
@@ -152,8 +150,6 @@ metadata:
   name: k8s-boot-demo-deployment-green
 spec:
   replicas: 3
-  strategy:
-    type: RollingUpdate
   selector:
     matchLabels:
       app: k8s-boot-demo
