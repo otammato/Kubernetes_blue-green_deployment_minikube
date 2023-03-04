@@ -80,6 +80,8 @@ minikube start
 
 ### 2. Launching Kubernetes deployments and services
 
+#### 2.1. Launching "blue" set
+
 deployment-blue.yaml
 
 ``` yaml
