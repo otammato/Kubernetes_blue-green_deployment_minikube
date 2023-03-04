@@ -80,7 +80,7 @@ minikube start
 
 ### 2. Launching Kubernetes deployments and services
 
-#### 2.1. Launching "blue" set
+#### 2.1. Launching the "blue" set
 
 deployment-blue.yaml
 
@@ -142,6 +142,7 @@ curl 192.168.49.2:30090/api/info
 
 <img width="1024" alt="Screenshot 2023-03-01 at 15 32 03" src="https://user-images.githubusercontent.com/104728608/222186758-f5a1ccbc-5f98-461a-951c-d2c8e63cbabb.png">
 
+#### 2.2. Launching the "green" set
 
 deployment-green.yaml
 
@@ -198,6 +199,10 @@ kubectl apply -f service-preprod.yaml
 kubectl get all
 minikube ip
 192.168.49.2
+```
+
+#### 2.3. Both deployments are active now:
+```
 curl 192.168.49.2:30090/api/info
 {"hostName":"k8s-boot-demo-deployment-blue-7459fc4bd8-rk8kt","app":"K8S SpringBoot Demo","version":"v1"}
 $ curl 192.168.99.103:30092/api/info
